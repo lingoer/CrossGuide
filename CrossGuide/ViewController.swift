@@ -94,15 +94,18 @@ extension ViewController: MTKViewDelegate{
                 return
         }
         let commandBuffer = commandQueue.makeCommandBuffer()
-        let src = MPSImage(texture: inputTexture, featureChannels: 1)
-        let (_, uv) = crossGuide!(commandbuffer: commandBuffer, image: src)
-        let encoder = commandBuffer.makeComputeCommandEncoder()
-        encoder.setTexture(inputTexture, at: 0)
-        encoder.setTexture(uv.texture, at: 1)
-        encoder.setTexture(drawable.texture, at: 2)
-        encoder.dispatch(pipeline: displayPipeline, width: drawable.texture.width, height: drawable.texture.height, featureChannels: 3)
-        encoder.endEncoding()
-        releaseImage(uv)
+//        TODO: hwo to get 3 channel images? the original number was 1.
+        let src = MPSImage(texture: inputTexture, featureChannels: 3)
+//        TODO: how to use prediction here?
+        let (_, prediction) = crossGuide!(commandbuffer: commandBuffer, image: src)
+        print(prediction)
+//        let encoder = commandBuffer.makeComputeCommandEncoder()
+//        encoder.setTexture(inputTexture, at: 0)
+//        encoder.setTexture(uv.texture, at: 1)
+//        encoder.setTexture(drawable.texture, at: 2)
+//        encoder.dispatch(pipeline: displayPipeline, width: drawable.texture.width, height: drawable.texture.height, featureChannels: 3)
+//        encoder.endEncoding()
+//        releaseImage(uv)
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
         drawable.present()

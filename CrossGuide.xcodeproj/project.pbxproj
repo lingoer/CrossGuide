@@ -19,6 +19,8 @@
 		172EDC8F1EE7C9F60060C33C /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172EDC881EE7C9F60060C33C /* IO.swift */; };
 		172EDC901EE7C9F60060C33C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 172EDC891EE7C9F60060C33C /* Shaders.metal */; };
 		172EDC911EE7C9F60060C33C /* UpscaleAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172EDC8A1EE7C9F60060C33C /* UpscaleAdd.swift */; };
+		BF6AF6A01EE854F400E5A8AC /* weights in Resources */ = {isa = PBXBuildFile; fileRef = BF6AF69F1EE854F400E5A8AC /* weights */; };
+		BF6AF6A21EE8555E00E5A8AC /* Dense.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AF6A11EE8555E00E5A8AC /* Dense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		172EDC881EE7C9F60060C33C /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		172EDC891EE7C9F60060C33C /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		172EDC8A1EE7C9F60060C33C /* UpscaleAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpscaleAdd.swift; sourceTree = "<group>"; };
+		BF6AF69F1EE854F400E5A8AC /* weights */ = {isa = PBXFileReference; lastKnownFileType = folder; path = weights; sourceTree = "<group>"; };
+		BF6AF6A11EE8555E00E5A8AC /* Dense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		172EDC5D1EE7C4B30060C33C /* CrossGuide */ = {
 			isa = PBXGroup;
 			children = (
+				BF6AF69F1EE854F400E5A8AC /* weights */,
 				172EDC831EE7C9F60060C33C /* MetalNN */,
 				172EDC5E1EE7C4B30060C33C /* AppDelegate.swift */,
 				172EDC601EE7C4B30060C33C /* ViewController.swift */,
@@ -82,6 +87,7 @@
 		172EDC831EE7C9F60060C33C /* MetalNN */ = {
 			isa = PBXGroup;
 			children = (
+				BF6AF6A11EE8555E00E5A8AC /* Dense.swift */,
 				172EDC841EE7C9F60060C33C /* BatchNorm.swift */,
 				172EDC851EE7C9F60060C33C /* Convolution.swift */,
 				172EDC861EE7C9F60060C33C /* CrossGuideNet.swift */,
@@ -125,7 +131,7 @@
 				TargetAttributes = {
 					172EDC5A1EE7C4B30060C33C = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = RH547UXARG;
+						DevelopmentTeam = U7GTT2L3T4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -155,6 +161,7 @@
 			files = (
 				172EDC691EE7C4B30060C33C /* LaunchScreen.storyboard in Resources */,
 				172EDC661EE7C4B30060C33C /* Assets.xcassets in Resources */,
+				BF6AF6A01EE854F400E5A8AC /* weights in Resources */,
 				172EDC641EE7C4B30060C33C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +180,7 @@
 				172EDC611EE7C4B30060C33C /* ViewController.swift in Sources */,
 				172EDC5F1EE7C4B30060C33C /* AppDelegate.swift in Sources */,
 				172EDC8F1EE7C9F60060C33C /* IO.swift in Sources */,
+				BF6AF6A21EE8555E00E5A8AC /* Dense.swift in Sources */,
 				172EDC911EE7C9F60060C33C /* UpscaleAdd.swift in Sources */,
 				172EDC8E1EE7C9F60060C33C /* Helper.swift in Sources */,
 			);
@@ -297,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RH547UXARG;
+				DEVELOPMENT_TEAM = U7GTT2L3T4;
 				INFOPLIST_FILE = CrossGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ruoyu.CrossGuide;
@@ -310,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RH547UXARG;
+				DEVELOPMENT_TEAM = U7GTT2L3T4;
 				INFOPLIST_FILE = CrossGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ruoyu.CrossGuide;
@@ -338,6 +346,7 @@
 				172EDC6F1EE7C4B30060C33C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

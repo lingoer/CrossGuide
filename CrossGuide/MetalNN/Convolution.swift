@@ -37,9 +37,9 @@ func Conv2d(kernelWidth: Int = 3, kernelHeight: Int = 3,
                                                inputFeatureChannels: inputFeatures,
                                                outputFeatureChannels: outputFeatures,
                                                neuronFilter: activation)
-    let w = loadParam(name: name + "_filter",
+    let w = loadParam(name: name + "_kernel",
                       count: inputFeatures * kernelHeight * kernelWidth * outputFeatures)
-    let b = loadParam(name: name + "_biases", count: outputFeatures)
+    let b = loadParam(name: name + "_bias", count: outputFeatures)
     let conv = MPSCNNConvolution(device: device,
                                  convolutionDescriptor: convDesc,
                                  kernelWeights: w!,
